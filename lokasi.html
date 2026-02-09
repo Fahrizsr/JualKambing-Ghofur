@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kambing Ghofur - Lokasi</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 450px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kambing Ghofur</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="lokasi.html" class="active">Lokasi</a></li>
+        <li><a href="tentang-kontak.html">Tentang & Kontak</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Lokasi -->
+  <section class="hero-other">
+    <div class="hero-text">
+      <h1>Lokasi Kami</h1>
+      <p>Temukan peternakan Kambing Ghofur di Dusun Krajan Kulon, Tanjungrejo – Jember</p>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="lokasi container">
+    <h2>Kunjungi Peternakan Kami</h2>
+    <p>
+      Silakan datang langsung ke lokasi kami,
+      atau <a href="https://maps.google.com/?q=-8.352499,113.555094" target="_blank">klik di sini untuk navigasi</a>.
+    </p>
+
+    <div id="map"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kambing Ghofur | Dusun Krajan Kulon, Tanjungrejo - Jember</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Navbar scroll effect
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Toggle menu untuk mobile
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    // Leaflet Map dengan koordinat yang di-update
+    const lat = -8.352499;
+    const lng = 113.555094;
+    const map = L.map('map').setView([lat, lng], 17);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([lat, lng])
+      .addTo(map)
+      .bindPopup("<b>Peternakan Kambing Ghofur</b><br>Dusun Krajan Kulon, Tanjungrejo - Jember")
+      .openPopup();
+  </script>
+
+</body>
+</html>

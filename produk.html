@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kambing Ghofur - Produk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kambing Ghofur</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html" class="active">Produk</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="tentang-kontak.html">Tentang & Kontak</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Produk -->
+  <section class="hero-other">
+    <div class="hero-other-text">
+      <h1>Produk Kami</h1>
+      <p>Pilihan kambing sehat, terawat, dan sesuai syariat untuk qurban & aqiqah</p>
+    </div>
+  </section>
+
+  <!-- Daftar Produk -->
+  <section class="produk container">
+    <h2>Daftar Kambing</h2>
+    <div class="produk-grid">
+
+      <!-- Produk 1 -->
+      <div class="produk-card">
+        <img src="img/produk1.png" alt="Kambing A">
+        <h3>Kambing A</h3>
+        <p>Berat ±25 kg, sehat, cocok untuk aqiqah.</p>
+        <p class="harga">Rp 2.500.000</p>
+        <a href="https://wa.me/6281289584060?text=Halo%2C%20saya%20ingin%20memesan%20Kambing%20A%20%28Berat%20%C2%B125%20kg%2C%20Rp%202.500.000%29.%20Mohon%20info%20lebih%20lanjut."
+          class="btn" target="_blank">Pesan Sekarang</a>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="produk-card">
+        <img src="img/produk2.png" alt="Kambing B">
+        <h3>Kambing B</h3>
+        <p>Berat ±30 kg, sehat, cocok untuk qurban.</p>
+        <p class="harga">Rp 3.000.000</p>
+        <a href="https://wa.me/6281289584060?text=Halo%2C%20saya%20ingin%20memesan%20Kambing%20B%20%28Berat%20%C2%B130%20kg%2C%20Rp%203.000.000%29.%20Mohon%20info%20lebih%20lanjut."
+          class="btn" target="_blank">Pesan Sekarang</a>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="produk-card">
+        <img src="img/produk3.png" alt="Kambing C">
+        <h3>Kambing C</h3>
+        <p>Berat ±35 kg, terawat, premium untuk qurban.</p>
+        <p class="harga">Rp 3.500.000</p>
+        <a href="https://wa.me/6281289584060?text=Halo%2C%20saya%20ingin%20memesan%20Kambing%20C%20%28Berat%20%C2%B135%20kg%2C%20Rp%203.500.000%29.%20Mohon%20info%20lebih%20lanjut."
+          class="btn" target="_blank">Pesan Sekarang</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimoni Pelanggan -->
+  <section class="testimoni container">
+    <h2>Apa Kata Pelanggan?</h2>
+    <div class="testimoni-grid">
+
+      <div class="testimoni-card">
+        <p>"Pelayanan sangat ramah, kambing sehat dan sesuai dengan yang ditawarkan. Terima kasih Kambing Ghofur!"</p>
+        <h4>- Bapak Ahmad, Jember</h4>
+      </div>
+
+      <div class="testimoni-card">
+        <p>"Pengiriman cepat dan kambingnya bagus sekali. Sangat puas untuk aqiqah anak saya."</p>
+        <h4>- Ibu Siti, Tanggul</h4>
+      </div>
+
+      <div class="testimoni-card">
+        <p>"Harga terjangkau dan kambing berkualitas. InsyaAllah langganan setiap qurban."</p>
+        <h4>- Pak Hadi, Ambulu</h4>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kambing Ghofur | Dusun Krajan Kulon, Tanjungrejo - Jember</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Toggle menu untuk mobile
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+</html>

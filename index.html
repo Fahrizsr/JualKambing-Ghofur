@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kambing Ghofur - Beranda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kambing Ghofur</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="tentang-kontak.html">Tentang & Kontak</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Kambing Berkualitas untuk Qurban & Aqiqah</h1>
+      <p>Pilih kambing terbaik dengan harga transparan, sehat, dan terjamin langsung dari peternak di Jember.</p>
+      <a href="produk.html" class="btn">Lihat Produk</a>
+    </div>
+  </section>
+
+  <!-- Tentang Singkat -->
+  <section class="about-preview">
+    <div class="container">
+      <h2>Mengapa Memilih Kambing Ghofur?</h2>
+      <p>
+        Kambing Ghofur hadir dengan komitmen menyediakan kambing yang sehat, terawat, dan sesuai syariat.
+        Dengan pengalaman bertahun-tahun dalam peternakan, kami dipercaya oleh banyak pelanggan untuk kebutuhan qurban, aqiqah, maupun acara khusus.
+      </p>
+      <a href="tentang-kontak.html" class="btn">Baca Selengkapnya</a>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Siap Memilih Kambing Anda?</h2>
+      <p>Klik tombol di bawah untuk melihat daftar kambing dan pilih sesuai kebutuhan Anda.</p>
+      <a href="produk.html" class="btn">Lihat Daftar Kambing</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kambing Ghofur | Dusun Krajan Kulon, Tanjungrejo - Jember</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener("scroll", function() {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Toggle menu untuk mobile
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

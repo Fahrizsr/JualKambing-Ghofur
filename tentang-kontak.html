@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kambing Ghofur - Tentang & Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kambing Ghofur</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="tentang-kontak.html" class="active">Tentang & Kontak</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Tentang -->
+  <section class="hero-other">
+    <div class="hero-other-text">
+      <h1>Tentang Kambing Ghofur</h1>
+      <p>Kami menyediakan kambing berkualitas untuk qurban & aqiqah dengan harga transparan, sehat, dan terjamin.</p>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <main>
+    <!-- About Section -->
+    <section class="about container">
+      <h2>Misi Kami</h2>
+      <ul>
+        <li>Merawat kambing dengan standar kesehatan tinggi</li>
+        <li>Memberikan informasi harga yang transparan dan jujur</li>
+        <li>Melayani pelanggan dengan sepenuh hati</li>
+        <li>Menjadi mitra utama dalam penyediaan kambing untuk qurban dan aqiqah</li>
+      </ul>
+
+      <h2>Visi Kami</h2>
+      <p>
+        Menjadi peternakan kambing terkemuka di Jember yang dikenal dengan kualitas, kejujuran, dan layanan pelanggan terbaik.
+      </p>
+
+      <!-- Tombol Chat WA -->
+      <div class="chat-wa-container" style="text-align:center; margin-top:30px;">
+        <a href="https://wa.me/6281289584060?text=Halo,%20saya%20ingin%20memesan%20kambing.%20Mohon%20info%20lebih%20lanjut." target="_blank" class="btn btn-wa">Chat WA Sekarang</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kambing Ghofur | Dusun Krajan Kulon, Tanjungrejo - Jember</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Toggle menu untuk mobile
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
